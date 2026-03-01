@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr Sanat Atul Lotlikar</title>
+<title>Dr Sanat Atul Lotlikar | Consultant Psychiatrist in Goa</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -25,23 +25,20 @@ body {
     line-height: 1.7;
 }
 
-/* GENERAL SECTION */
 section {
     padding: 100px 8%;
 }
 
-/* ================= PREMIUM HERO ================= */
+/* ================= HERO ================= */
 
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 90px;
     flex-wrap: wrap;
-    background: #f4f1ec;
 }
 
-/* IMAGE SIDE */
 .hero-left {
     flex: 1;
     max-width: 550px;
@@ -49,16 +46,12 @@ section {
 
 .hero-left img {
     width: 100%;
+    height: 520px;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-    transition: 0.4s ease;
 }
 
-.hero-left img:hover {
-    transform: scale(1.02);
-}
-
-/* TEXT SIDE */
 .hero-right {
     flex: 1;
     min-width: 320px;
@@ -68,9 +61,7 @@ section {
     font-family: 'Playfair Display', serif;
     font-size: clamp(48px, 6vw, 82px);
     line-height: 1.05;
-    font-weight: 700;
     margin-bottom: 25px;
-    letter-spacing: -1px;
 }
 
 .hero-right h1::after {
@@ -82,28 +73,60 @@ section {
     margin-top: 20px;
 }
 
-.hero-right h3 {
-    font-size: 26px;
-    font-weight: 400;
-    color: #5c5c5c;
-    margin: 35px 0 45px 0;
+.designation {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.hero-right button {
-    margin-top: 35px;        /* 👈 THIS pushes button down */
+.hero-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    margin-top: 45px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
     padding: 16px 50px;
     background: #111;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
-.hero-right button:hover {
+
+.btn-primary:hover {
     background: #6d8b74;
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    padding: 16px 50px;
+    background: #6d8b74;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #111;
+    transform: translateY(-4px);
 }
 
 /* ================= PROLOGUE ================= */
@@ -127,81 +150,14 @@ section {
     margin-bottom: 25px;
 }
 
-.prologue-text p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
 .prologue-img img {
     width: 100%;
+    height: 420px;
+    object-fit: cover;
     border-radius: 15px;
 }
 
-/* ================= EDUCATION ================= */
-
-.education {
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.education-left,
-.education-right {
-    flex: 1;
-    min-width: 300px;
-}
-
-.education-left h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-}
-
-.edu-block {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-.edu-block h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-/* ================= MENTAL HEALTH ================= */
-
-.mental {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.mental-left,
-.mental-right {
-    flex: 1;
-    min-width: 300px;
-}
-
-.mental-left {
-    background: #6d8b74;
-    color: white;
-    padding: 100px 50px;
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-}
-
-.mental-right {
-    padding: 100px 50px;
-    background: #f1ede8;
-    font-size: 18px;
-}
-
-.mental-right p {
-    margin-bottom: 20px;
-}
-
-/* ================= BEAUTIFUL SERVICES ================= */
+/* ================= SERVICES ================= */
 
 .services {
     display: flex;
@@ -224,19 +180,12 @@ section {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transition: 0.4s ease;
-}
-
-.services .service-images img:hover {
-    transform: translateY(-8px);
 }
 
 .services .service-text {
     flex: 1;
     max-width: 500px;
     font-size: 22px;
-    line-height: 1.8;
-    color: #2c2c2c;
 }
 
 .services .service-text p {
@@ -244,24 +193,6 @@ section {
     padding: 20px 25px;
     background: #f7f5f2;
     border-radius: 12px;
-}
-
-/* ================= SPECIALIZATION ================= */
-
-.specialization h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    margin-bottom: 25px;
-}
-
-.specialization ul {
-    list-style: none;
-    columns: 2;
-    font-size: 18px;
-}
-
-.specialization li {
-    margin-bottom: 10px;
 }
 
 /* ================= CONTACT ================= */
@@ -319,12 +250,21 @@ section {
     text-align: center;
 }
 
-.hero {
-    gap: 50px;
+.hero-left img {
+    height: 350px;
 }
 
-.specialization ul {
-    columns: 1;
+.prologue-img img {
+    height: 300px;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    width: 100%;
 }
 }
 </style>
@@ -332,32 +272,41 @@ section {
 
 <body>
 
+
 <!-- HERO -->
 <section class="hero">
     <div class="hero-left">
-        <img src="sanat1.jpg" alt="Dr Sanat">
+        <img src="sanat1.jpg" alt="Dr Sanat Atul Lotlikar">
     </div>
 
     <div class="hero-right">
-        <div class="hero-content">
-            <h1>
-                <span class="light">Dr</span> Sanat<br>
-                Atul Lotlikar
-            </h1>
+        <h1>
+            Dr Sanat<br>
+            Atul Lotlikar
+        </h1>
 
-            <p class="designation">
-                Consultant Psychiatrist
-                <span class="degree">(MBBS, MD)</span>
-            </p>
+        <p class="designation">
+            Consultant Psychiatrist (MBBS, MD)
+        </p>
 
-            <p class="hero-description">
-                Compassionate, evidence-based psychiatric care
-                focused on clarity, balance, and emotional well-being.
-            </p>
+        <p class="hero-description">
+            Compassionate, evidence-based psychiatric care focused on clarity, balance, and emotional well-being.
+        </p>
 
-            <button onclick="location.href='#contact'">
+        <div class="hero-buttons">
+
+            <!-- Call Now First -->
+            <button class="btn-secondary"
+                onclick="window.location.href='tel:+918275622296'">
+                <i class="fas fa-phone"></i> Call Now
+            </button>
+
+            <!-- Book Consultation Second -->
+            <button class="btn-primary"
+                onclick="location.href='#contact'">
                 Book Consultation
             </button>
+
         </div>
     </div>
 </section>
@@ -398,8 +347,8 @@ section {
 
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/sanat-lotlikar-2b219b36b/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/el_matador496?igsh=MTQ1YThpYnJlOTRsNQ=="><i class="fab fa-instagram"></i></a>
-	<a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/el_matador496"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-x-twitter"></i></a>
     </div>
 </section>
