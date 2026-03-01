@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr Sanat Atul Lotlikar</title>
 
-<!-- Font Awesome for Social Icons -->
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -16,70 +19,91 @@
 }
 
 body {
-    font-family: Georgia, serif;
-    background: #f2eee8;
+    font-family: 'Inter', sans-serif;
+    background: #f4f1ec;
     color: #111;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* GENERAL SECTION SPACING */
+/* GENERAL SECTION */
 section {
-    padding: 90px 7%;
+    padding: 100px 8%;
 }
 
-/* ================= HERO ================= */
+/* ================= PREMIUM HERO ================= */
 
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
     flex-wrap: wrap;
-    background: #e8e3db;
+    background: #f4f1ec;
 }
 
+/* IMAGE SIDE */
 .hero-left {
     flex: 1;
-    max-width: 600px;
+    max-width: 550px;
 }
 
 .hero-left img {
     width: 100%;
-    height: auto;
-    display: block;
-    border: 3px solid #111;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    transition: 0.4s ease;
 }
 
+.hero-left img:hover {
+    transform: scale(1.02);
+}
+
+/* TEXT SIDE */
 .hero-right {
     flex: 1;
     min-width: 320px;
 }
 
 .hero-right h1 {
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 1.1;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 1.05;
+    font-weight: 700;
     margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-right h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #6d8b74;
+    margin-top: 20px;
 }
 
 .hero-right h3 {
-    font-size: clamp(18px, 2.5vw, 28px);
-    font-weight: normal;
-    color: #6b6b6b;
-    margin-bottom: 40px;
+    font-size: 26px;
+    font-weight: 400;
+    color: #5c5c5c;
+    margin: 35px 0 45px 0;
 }
 
 .hero-right button {
-    padding: 14px 40px;
-    background: black;
+    margin-top: 35px;        /* 👈 THIS pushes button down */
+    padding: 16px 50px;
+    background: #111;
     color: white;
     font-size: 18px;
     border: none;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
-
 .hero-right button:hover {
-    background: #333;
+    background: #6d8b74;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 /* ================= PROLOGUE ================= */
@@ -98,18 +122,20 @@ section {
 }
 
 .prologue-text h2 {
-    font-size: clamp(28px, 4vw, 48px);
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
     margin-bottom: 25px;
 }
 
 .prologue-text p {
     font-size: 18px;
     color: #333;
+    margin-bottom: 15px;
 }
 
 .prologue-img img {
     width: 100%;
-    height: auto;
+    border-radius: 15px;
 }
 
 /* ================= EDUCATION ================= */
@@ -127,17 +153,20 @@ section {
 }
 
 .education-left h2 {
-    font-size: clamp(28px, 4vw, 48px);
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
 }
 
 .edu-block {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #aaa;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .edu-block h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
@@ -155,18 +184,16 @@ section {
 }
 
 .mental-left {
-    background: #e8e3db;
-    padding: 80px 40px;
-}
-
-.mental-left h2 {
-    font-size: clamp(28px, 4vw, 48px);
+    background: #6d8b74;
+    color: white;
+    padding: 100px 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
 }
 
 .mental-right {
-    background: #5b5b5b;
-    color: white;
-    padding: 80px 40px;
+    padding: 100px 50px;
+    background: #f1ede8;
     font-size: 18px;
 }
 
@@ -174,74 +201,86 @@ section {
     margin-bottom: 20px;
 }
 
-/* ================= SERVICES ================= */
+/* ================= BEAUTIFUL SERVICES ================= */
 
 .services {
     display: flex;
-    gap: 60px;
     align-items: center;
+    justify-content: center;
+    gap: 80px;
     flex-wrap: wrap;
+    background: #ffffff;
 }
 
-.service-images,
-.service-text {
+.services .service-images {
     flex: 1;
-    min-width: 300px;
-}
-
-.service-images {
+    max-width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
 }
 
-.service-images img {
+.services .service-images img {
     width: 100%;
-    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
 }
 
-.service-text {
-    font-size: 20px;
-    text-align: center;
+.services .service-images img:hover {
+    transform: translateY(-8px);
+}
+
+.services .service-text {
+    flex: 1;
+    max-width: 500px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #2c2c2c;
+}
+
+.services .service-text p {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background: #f7f5f2;
+    border-radius: 12px;
 }
 
 /* ================= SPECIALIZATION ================= */
 
 .specialization h2 {
-    font-size: clamp(24px, 3.5vw, 36px);
-    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 25px;
 }
 
 .specialization ul {
     list-style: none;
-    font-size: 22px;
-    margin-bottom: 30px;
+    columns: 2;
+    font-size: 18px;
 }
 
 .specialization li {
     margin-bottom: 10px;
 }
 
-.services-line {
-    font-size: 18px;
-}
-
 /* ================= CONTACT ================= */
 
 .contact {
-    background: #5b5b5b;
+    background: #111;
     color: white;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: clamp(32px, 5vw, 56px);
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
     margin-bottom: 30px;
 }
 
 .contact p {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
 /* SOCIAL ICONS */
@@ -259,14 +298,14 @@ section {
     margin: 0 10px;
     border-radius: 50%;
     background: white;
-    color: #5b5b5b;
+    color: #111;
     font-size: 18px;
     transition: 0.3s ease;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    background: #111;
+    background: #6d8b74;
     color: white;
     transform: translateY(-5px);
 }
@@ -274,18 +313,19 @@ section {
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-    section {
-        padding: 60px 6%;
-        text-align: center;
-    }
 
-    .hero {
-        gap: 40px;
-    }
+section {
+    padding: 70px 6%;
+    text-align: center;
+}
 
-    .service-text {
-        text-align: center;
-    }
+.hero {
+    gap: 50px;
+}
+
+.specialization ul {
+    columns: 1;
+}
 }
 </style>
 </head>
@@ -299,13 +339,26 @@ section {
     </div>
 
     <div class="hero-right">
-        <h1>
-            Dr Sanat<br>
-            Atul<br>
-            Lotlikar
-        </h1>
-        <h3>Psychiatrist (MBBS, MD)</h3>
-        <button onclick="location.href='#contact'">Reach out</button>
+        <div class="hero-content">
+            <h1>
+                <span class="light">Dr</span> Sanat<br>
+                Atul Lotlikar
+            </h1>
+
+            <p class="designation">
+                Consultant Psychiatrist
+                <span class="degree">(MBBS, MD)</span>
+            </p>
+
+            <p class="hero-description">
+                Compassionate, evidence-based psychiatric care
+                focused on clarity, balance, and emotional well-being.
+            </p>
+
+            <button onclick="location.href='#contact'">
+                Book Consultation
+            </button>
+        </div>
     </div>
 </section>
 
@@ -313,44 +366,11 @@ section {
 <section class="prologue">
     <div class="prologue-text">
         <h2>Prologue</h2>
-        <p>
-            At our clinic, we offer a safe and confidential space where we talk about concerns that matter most to you.
-            We focus on understanding you as a person and providing evidence-based treatment that supports your emotional well-being.
-        </p>
+        <p>At our clinic, we offer a safe and confidential space where we talk about concerns that matter most to you.</p>
+        <p>We focus on understanding you as a person and providing evidence-based treatment that supports your emotional well-being.</p>
     </div>
     <div class="prologue-img">
         <img src="sanat2.jpg" alt="Conference">
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="education">
-    <div class="education-left">
-        <h2>Education and Qualifications</h2>
-    </div>
-    <div class="education-right">
-        <div class="edu-block">
-            <h3>Bachelor of Medicine and Bachelor of Surgery (MBBS)</h3>
-            <p>Goa Medical College<br>Bambolim-Goa<br>2019</p>
-        </div>
-
-        <div class="edu-block">
-            <h3>Bachelor's Degree in Marketing Management</h3>
-            <p>Institute Of Psychiatry and Human Behaviour<br>Bambolim-Goa<br>2025</p>
-        </div>
-    </div>
-</section>
-
-<!-- MENTAL HEALTH -->
-<section class="mental">
-    <div class="mental-left">
-        <h2>Your Mental Health Matters</h2>
-    </div>
-    <div class="mental-right">
-        <p>Life can sometimes feel overwhelming and your daily activities may feel too much of a burden.</p>
-        <p>You don't have to face emotional struggles alone.</p>
-        <p>Personalized psychiatric care in a supportive and confidential setting.</p>
-        <p>Take the first step towards a calmer and healthier life today.</p>
     </div>
 </section>
 
@@ -362,43 +382,25 @@ section {
     </div>
 
     <div class="service-text">
-        <p>Online consultation upon request ensuring care from the convenience of your home.</p>
-        <p>Home visits within Goa providing personalized care.</p>
-        <p>In-person consultation in our OPD for focused mental health treatment.</p>
+        <p>Online consultation ensuring care from the comfort of your home.</p>
+        <p>Home visits within Goa providing personalized attention.</p>
+        <p>In-person consultation in our OPD for focused treatment.</p>
     </div>
-</section>
-
-<!-- SPECIALIZATION -->
-<section class="specialization">
-    <h2>Dr Sanat Atul Lotlikar is specialized in diagnosis and management of:</h2>
-    <ul>
-        <li>Anxiety disorder</li>
-        <li>Panic disorder</li>
-        <li>Adjustment issues</li>
-        <li>Substance use disorder</li>
-        <li>Psychotic disorder</li>
-        <li>Marital issues</li>
-        <li>Sleep disturbance</li>
-        <li>Chronic fatigue</li>
-    </ul>
-    <p class="services-line">
-        Services include diagnosis, counseling, pharmacotherapy and emergency treatment.
-    </p>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-    <h2>Contact me</h2>
-    <p>Trimurti General Hospital – Mondays & Fridays 6pm–7pm</p>
-    <p>Royal Hospital – Wednesdays 6pm–7pm</p>
+    <h2>Contact</h2>
+    <p>Trimurti General Hospital – Mon & Fri 6pm–7pm</p>
+    <p>Royal Hospital – Wed 6pm–7pm</p>
     <p>Contact: 8275622296 / 77200 96220</p>
     <p>Email: lotlikarsanat498@gmail.com</p>
 
     <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/sanat-lotlikar-2b219b36b/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/el_matador496?igsh=MTQ1YThpYnJlOTRsNQ=="><i class="fab fa-instagram"></i></a>
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
     </div>
 </section>
 
