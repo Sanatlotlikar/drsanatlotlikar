@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr Sanat Atul Lotlikar</title>
 
-    
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 * {
     margin: 0;
@@ -36,7 +38,6 @@ section {
     background: #e8e3db;
 }
 
-/* IMAGE SIDE */
 .hero-left {
     flex: 1;
     max-width: 600px;
@@ -44,19 +45,18 @@ section {
 
 .hero-left img {
     width: 100%;
-    height: auto;              /* FULL IMAGE ALWAYS */
+    height: auto;
     display: block;
     border: 3px solid #111;
 }
 
-/* TEXT SIDE */
 .hero-right {
     flex: 1;
     min-width: 320px;
 }
 
 .hero-right h1 {
-    font-size: clamp(40px, 6vw, 72px);   /* RESPONSIVE TEXT */
+    font-size: clamp(40px, 6vw, 72px);
     line-height: 1.1;
     margin-bottom: 25px;
 }
@@ -231,6 +231,7 @@ section {
 .contact {
     background: #5b5b5b;
     color: white;
+    text-align: center;
 }
 
 .contact h2 {
@@ -243,7 +244,34 @@ section {
     margin-bottom: 15px;
 }
 
-/* ================= MOBILE IMPROVEMENTS ================= */
+/* SOCIAL ICONS */
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: white;
+    color: #5b5b5b;
+    font-size: 18px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #111;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
     section {
@@ -365,6 +393,13 @@ section {
     <p>Royal Hospital – Wednesdays 6pm–7pm</p>
     <p>Contact: 8275622296 / 77200 96220</p>
     <p>Email: lotlikarsanat498@gmail.com</p>
+
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
 </section>
 
 </body>
