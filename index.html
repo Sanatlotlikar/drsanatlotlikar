@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Sanat Atul Lotlikar</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f2eee8;
+    color: #111;
+    line-height: 1.6;
+}
+
+/* GENERAL SECTION SPACING */
+section {
+    padding: 90px 7%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    background: #e8e3db;
+}
+
+/* IMAGE SIDE */
+.hero-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-left img {
+    width: 100%;
+    height: auto;              /* FULL IMAGE ALWAYS */
+    display: block;
+    border: 3px solid #111;
+}
+
+/* TEXT SIDE */
+.hero-right {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-right h1 {
+    font-size: clamp(40px, 6vw, 72px);   /* RESPONSIVE TEXT */
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-right h3 {
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: normal;
+    color: #6b6b6b;
+    margin-bottom: 40px;
+}
+
+.hero-right button {
+    padding: 14px 40px;
+    background: black;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-right button:hover {
+    background: #333;
+}
+
+/* ================= PROLOGUE ================= */
+
+.prologue {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.prologue-text,
+.prologue-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.prologue-text h2 {
+    font-size: clamp(28px, 4vw, 48px);
+    margin-bottom: 25px;
+}
+
+.prologue-text p {
+    font-size: 18px;
+    color: #333;
+}
+
+.prologue-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* ================= EDUCATION ================= */
+
+.education {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.education-left,
+.education-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.education-left h2 {
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+.edu-block {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+.edu-block h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* ================= MENTAL HEALTH ================= */
+
+.mental {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mental-left,
+.mental-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mental-left {
+    background: #e8e3db;
+    padding: 80px 40px;
+}
+
+.mental-left h2 {
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+.mental-right {
+    background: #5b5b5b;
+    color: white;
+    padding: 80px 40px;
+    font-size: 18px;
+}
+
+.mental-right p {
+    margin-bottom: 20px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-images,
+.service-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.service-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.service-images img {
+    width: 100%;
+    height: auto;
+}
+
+.service-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ================= SPECIALIZATION ================= */
+
+.specialization h2 {
+    font-size: clamp(24px, 3.5vw, 36px);
+    margin-bottom: 30px;
+}
+
+.specialization ul {
+    list-style: none;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.specialization li {
+    margin-bottom: 10px;
+}
+
+.services-line {
+    font-size: 18px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #5b5b5b;
+    color: white;
+}
+
+.contact h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ================= MOBILE IMPROVEMENTS ================= */
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 6%;
+        text-align: center;
+    }
+
+    .hero {
+        gap: 40px;
+    }
+
+    .service-text {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <img src="sanat1.jpg" alt="Dr Sanat">
+    </div>
+
+    <div class="hero-right">
+        <h1>
+            Dr Sanat<br>
+            Atul<br>
+            Lotlikar
+        </h1>
+        <h3>Psychiatrist (MBBS, MD)</h3>
+        <button onclick="location.href='#contact'">Reach out</button>
+    </div>
+</section>
+
+<!-- PROLOGUE -->
+<section class="prologue">
+    <div class="prologue-text">
+        <h2>Prologue</h2>
+        <p>
+            At our clinic, we offer a safe and confidential space where we talk about concerns that matter most to you.
+            We focus on understanding you as a person and providing evidence-based treatment that supports your emotional well-being.
+        </p>
+    </div>
+    <div class="prologue-img">
+        <img src="sanat2.jpg" alt="Conference">
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education">
+    <div class="education-left">
+        <h2>Education and Qualifications</h2>
+    </div>
+    <div class="education-right">
+        <div class="edu-block">
+            <h3>Bachelor of Medicine and Bachelor of Surgery (MBBS)</h3>
+            <p>Goa Medical College<br>Bambolim-Goa<br>2019</p>
+        </div>
+
+        <div class="edu-block">
+            <h3>Bachelor's Degree in Marketing Management</h3>
+            <p>Institute Of Psychiatry and Human Behaviour<br>Bambolim-Goa<br>2025</p>
+        </div>
+    </div>
+</section>
+
+<!-- MENTAL HEALTH -->
+<section class="mental">
+    <div class="mental-left">
+        <h2>Your Mental Health Matters</h2>
+    </div>
+    <div class="mental-right">
+        <p>Life can sometimes feel overwhelming and your daily activities may feel too much of a burden.</p>
+        <p>You don't have to face emotional struggles alone.</p>
+        <p>Personalized psychiatric care in a supportive and confidential setting.</p>
+        <p>Take the first step towards a calmer and healthier life today.</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <div class="service-images">
+        <img src="sanat3.jpg" alt="Mental Health">
+        <img src="sanat4.jpg" alt="Mental Health">
+    </div>
+
+    <div class="service-text">
+        <p>Online consultation upon request ensuring care from the convenience of your home.</p>
+        <p>Home visits within Goa providing personalized care.</p>
+        <p>In-person consultation in our OPD for focused mental health treatment.</p>
+    </div>
+</section>
+
+<!-- SPECIALIZATION -->
+<section class="specialization">
+    <h2>Dr Sanat Atul Lotlikar is specialized in diagnosis and management of:</h2>
+    <ul>
+        <li>Anxiety disorder</li>
+        <li>Panic disorder</li>
+        <li>Adjustment issues</li>
+        <li>Substance use disorder</li>
+        <li>Psychotic disorder</li>
+        <li>Marital issues</li>
+        <li>Sleep disturbance</li>
+        <li>Chronic fatigue</li>
+    </ul>
+    <p class="services-line">
+        Services include diagnosis, counseling, pharmacotherapy and emergency treatment.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact me</h2>
+    <p>Trimurti General Hospital – Mondays & Fridays 6pm–7pm</p>
+    <p>Royal Hospital – Wednesdays 6pm–7pm</p>
+    <p>Contact: 8275622296 / 77200 96220</p>
+    <p>Email: lotlikarsanat498@gmail.com</p>
+</section>
+
+</body>
+</html>
