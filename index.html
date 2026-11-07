@@ -51,6 +51,18 @@
  ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {"@type": "Question", "name": "Where does Dr Lotlikar see patients in Goa?", "acceptedAnswer": {"@type": "Answer", "text": "At Victor Hospital, Margao (Tuesday, Thursday and Saturday, 5pm-6pm), Trimurti General Hospital (Monday and Friday, 6pm-7pm) and Royal Hospital (Wednesday, 6pm-7pm)."}},
+  {"@type": "Question", "name": "Can I consult a psychiatrist online?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dr Lotlikar offers online consultation."}},
+  {"@type": "Question", "name": "Does he make home visits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, within Goa."}},
+  {"@type": "Question", "name": "What concerns does he treat?", "acceptedAnswer": {"@type": "Answer", "text": "Anxiety, depression, sleep disorders and other mental health concerns."}}
+ ]
+}
+</script>
 <style>
 :root {
     --ink: #13282b;
@@ -161,7 +173,7 @@ h1, h2, h3 {
 /* ================= HERO ================= */
 
 .hero {
-    padding: 28px 0 96px;
+    padding: 20px 0 80px;
 }
 
 .hero .wrap {
@@ -206,6 +218,8 @@ h1, h2, h3 {
 /* The arched frame echoes the arched doorways of Goan houses. */
 .arch {
     position: relative;
+    justify-self: end;
+    width: min(100%, 380px);
     aspect-ratio: 4 / 5;
     border-radius: 999px 999px 18px 18px;
     overflow: hidden;
@@ -228,7 +242,7 @@ h1, h2, h3 {
 
 /* ================= SECTIONS ================= */
 
-.section { padding: 96px 0; }
+.section { padding: 80px 0; }
 
 .section-light { background: var(--paper); }
 
@@ -236,13 +250,14 @@ h1, h2, h3 {
 
 .prologue .wrap {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     align-items: center;
     gap: clamp(36px, 6vw, 88px);
 }
 
 .prologue-img img {
     width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: var(--radius);
     background: var(--tile-wash);
@@ -278,6 +293,7 @@ h1, h2, h3 {
 }
 
 .ways-images {
+    max-width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
@@ -291,7 +307,7 @@ h1, h2, h3 {
     background: var(--tile-wash);
 }
 
-.ways-images img:nth-child(2) { margin-top: 48px; }
+.ways-images img:nth-child(2) { margin-top: 36px; }
 
 .ways h2 {
     font-size: clamp(30px, 3.2vw, 42px);
@@ -408,6 +424,68 @@ h1, h2, h3 {
     border: 0;
 }
 
+/* ================= FAQ ================= */
+
+.faq .wrap {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(36px, 6vw, 88px);
+    align-items: start;
+}
+
+.faq h2 {
+    font-size: clamp(30px, 3.2vw, 42px);
+    margin-bottom: 12px;
+}
+
+.faq .intro { color: var(--ink-soft); max-width: 22em; }
+
+.faq details {
+    border-top: 1px solid var(--line);
+    padding: 18px 0;
+}
+
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+    content: "+";
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--tile-wash);
+    color: var(--tile);
+    font: 500 20px/1 'Figtree', sans-serif;
+}
+
+.faq details[open] summary::after { content: "\2212"; }
+
+.faq details p {
+    margin-top: 12px;
+    color: var(--ink-soft);
+    max-width: 38em;
+}
+
+/* ================= STICKY CONTACT BAR (phones) ================= */
+
+.quickbar { display: none; }
+
 /* ================= CONTACT ================= */
 
 .contact {
@@ -488,6 +566,7 @@ h1, h2, h3 {
 /* ================= TABLET ================= */
 
 @media (max-width: 960px) {
+    .faq .wrap { grid-template-columns: 1fr; gap: 28px; }
     .week { grid-template-columns: repeat(3, 1fr); }
     .visit { grid-template-columns: 1fr; }
     .visit-map iframe { min-height: 320px; }
@@ -502,7 +581,23 @@ h1, h2, h3 {
 
     .fine { width: min(var(--wrap), 100% - 40px); }
 
-    .section { padding: 64px 0; }
+    .section { padding: 56px 0; }
+
+    body { padding-bottom: 72px; }
+
+    .quickbar {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        background: var(--paper);
+        border-top: 1px solid var(--line);
+    }
+
+    .quickbar .btn { padding: 13px 10px; }
 
     .hero { padding: 12px 0 64px; }
 
@@ -515,9 +610,15 @@ h1, h2, h3 {
 
     .hero .wrap { gap: 44px; }
 
-    .arch { max-width: 420px; width: 100%; margin-inline: auto; }
+    .arch { width: min(100%, 320px); justify-self: center; margin-inline: auto; }
+
+    .prologue-img img { max-width: 100%; }
+
+    .ways-images { max-width: 100%; }
 
     .hero-actions .btn { flex: 1 1 100%; }
+
+    .hero-copy { text-align: left; }
 
     .ways-images { order: 2; }
 
@@ -667,6 +768,38 @@ h1, h2, h3 {
     </div>
 </section>
 
+<!-- FAQ -->
+<section class="section faq" id="faq">
+    <div class="wrap">
+        <div>
+            <h2>Common questions</h2>
+            <p class="intro">Quick answers about booking and visiting Dr Lotlikar.</p>
+        </div>
+        <div>
+            <details open>
+                <summary>Where does Dr Lotlikar see patients in Goa?</summary>
+                <p>At Victor Hospital, Margao (Tuesday, Thursday and Saturday, 5pm–6pm), Trimurti General Hospital (Monday and Friday, 6pm–7pm) and Royal Hospital (Wednesday, 6pm–7pm).</p>
+            </details>
+            <details>
+                <summary>Can I consult a psychiatrist online?</summary>
+                <p>Yes. Dr Lotlikar offers online consultation, so you can speak with him from home.</p>
+            </details>
+            <details>
+                <summary>Does he make home visits?</summary>
+                <p>Yes, within Goa. Call or message to arrange a visit.</p>
+            </details>
+            <details>
+                <summary>What concerns does he treat?</summary>
+                <p>Anxiety, depression, sleep disorders and other mental health concerns. Every consultation is confidential.</p>
+            </details>
+            <details>
+                <summary>How do I book a consultation?</summary>
+                <p>Call 8275622296, message on WhatsApp, or email lotlikarsanat498@gmail.com. Tell us whether you prefer an online, home or in-person visit.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <!-- CONTACT -->
@@ -693,6 +826,11 @@ h1, h2, h3 {
     </div>
     <p class="fine">© Dr Sanat Atul Lotlikar, Consultant Psychiatrist, Margao, Goa</p>
 </footer>
+
+<nav class="quickbar" aria-label="Contact Dr Lotlikar">
+    <a class="btn btn-solid" href="tel:+918275622296"><i class="fas fa-phone" aria-hidden="true"></i> Call</a>
+    <a class="btn btn-wa" href="https://wa.me/918275622296?text=Hello%20Dr%20Lotlikar%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+</nav>
 
 </body>
 </html>
